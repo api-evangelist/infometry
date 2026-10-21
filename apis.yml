@@ -1,23 +1,61 @@
 aid: infometry
+
 name: Infometry
-description: 'Infometry is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Infometry provides enterprise data analytics and AI-driven solutions that transform raw data into actionable insights. Their platform offers cloud integration, advanced analytics, and AI capabilities to help businesses make smarter decisions. With a focus on data transformation, visualization, and predictive modeling, Infometry serves a range of industries seeking to leverage data for strategic advantage.'
+
 url: https://raw.githubusercontent.com/api-evangelist/infometry/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- Data
+- Analytics
+- AI
+- Enterprise
+- Solutions
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/infometry-well-known.yml
+- type: Hosts
+  url: hosts/infometry-hosts.yml
+- type: Vendors
+  url: vendors/infometry-vendors.yml
+- type: Leadership
+  url: https://www.infometry.net/tag/management/
+- type: DomainSecurity
+  url: security/infometry-domain-security.yml
 - type: Website
   url: https://infometry.net/
+- type: Blog
+  url: https://www.infometry.net/resources/blog/
+- type: Documentation
+  url: https://www.infometry.net/
+- type: Support
+  url: https://www.infometry.net/contact/
+
+apis: []
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

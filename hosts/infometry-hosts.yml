@@ -1,0 +1,53 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - docs
+  - website
+hosts:
+- host: api.infometry.net
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: infometry.net
+  role: api
+  relation: own
+- host: infometry.net
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: infometry.net
+  role: website
+  relation: own
+- host: www.infometry.net
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Leadership
+  - Blog
+  - Documentation
+  - Support
+  serves: []
+  registrable_domain: infometry.net
+  role: docs
+  relation: own
